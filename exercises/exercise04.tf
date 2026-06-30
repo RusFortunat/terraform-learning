@@ -11,6 +11,7 @@ provider "aws" {
   region = "eu-central-1"
 }
 
+# Actively managed by us
 resource "aws_s3_bucket" "my_bucket" {
   bucket = var.bucket_name
 
@@ -19,13 +20,14 @@ resource "aws_s3_bucket" "my_bucket" {
   }
 }
 
+# Managed somewhere else, we just want to reference it
 data "aws_s3_bucket" "my_external_bucket" {
   bucket = "not-managed-by-us"
 }
 
 variable "bucket_name" {
-  description = "My variable that is used to set a bucket name"
   type        = string
+  description = "My variable that is used to set a bucket name"
   default     = "my-terraform-bucket"
 }
 
