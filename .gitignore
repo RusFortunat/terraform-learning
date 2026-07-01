@@ -22,5 +22,6 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Plan output files
+# Plan & backend output files
 *.tfplan
+*.tfbackend
