@@ -1,0 +1,5 @@
+# for illustration purposes, not used
+bucket = "my-terraform-state-bucket-208211371539-eu-central-1-an"
+key    = "04-backends/dev/terraform.tfstate"
+region = "eu-central-1"
+use_lockfile = true 
